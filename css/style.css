@@ -94,7 +94,7 @@ body{
     gap :10px;
     flex-wrap: wrap;
     overflow-y: auto;
-    max-height: 60vh; /* Yeh humne overflow ko set kiya hai taake agar content zyada ho to scroll ho jaye */
+    max-height: 50vh; /* Yeh humne overflow ko set kiya hai taake agar content zyada ho to scroll ho jaye */
 }
 .card{
     width : 200px;
@@ -130,7 +130,7 @@ body{
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 88px;
+    bottom: 108px;
     right: 17px;
     /* ye udhar hi show kre ga */
     opacity: var(--a);
@@ -174,6 +174,9 @@ font-size: 16px;
     font-size: 17px;
 }
 .playbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 24px;
     width: 65%;
@@ -238,6 +241,7 @@ font-size: 16px;
 }
 .hamburger{
     display: none;
+    cursor: pointer;
 }
 .hamburgercont{
     display: flex;
@@ -309,6 +313,9 @@ align-items: center;
         z-index: 1;
         background-color: #1f1f1f;
         padding: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
     }
     .left .close{
         position: absolute;
@@ -356,6 +363,44 @@ align-items: center;
     .songinfo, .songtime{
         width: auto;
     }
+       .cards{
+        max-height: unset;
+        overflow-y: unset;
+        margin-bottom: 35vh;
+    }
+    .playbar{
+        right: 25px;
+  
+    }
+}
+@media (max-width: 500px) {
+    .card{
+        width: 100%;
+    }
+    .header > *{
+        padding: 2px;
+    }
+    .buttons{
+        margin: 0 6px;
+    }
+    .cards{
+        max-height: unset;
+        overflow-y: unset;
+    }
+    .header{
+        padding: 7px;
+    }
 
+    .spotifyPlaylists h1 {
+        padding: 4px;
+    }
+
+    .library{
+        height: 85vh;
+    }
+
+    .left{ 
+        width: 100vw;
+    }
 
 }
